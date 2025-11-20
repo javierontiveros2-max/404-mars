@@ -87,13 +87,9 @@ body {
   background-repeat: repeat;
 }
 
-:root {
-  --tierra-scale: clamp(90vw, 500vw, 80%);
-}
-
 .tierra {
   position: absolute;
-  width: var(--tierra-scale);
+  width: clamp(90vw, 500vw, 80%);
   left: 55%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -102,25 +98,7 @@ body {
 
 .luna {
   position: absolute;
-  width: calc(var(--tierra-scale)-2vw);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-}
-
-.asteroides {
-  position: absolute;
-  width: calc(var(--tierra-scale)-3vw);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-}
-
-.asteroides2 {
-  position: absolute;
-  width: calc(var(--tierra-scale)-4vw);
+  width: clamp(80vw, 400vw, 70%);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -191,16 +169,12 @@ h1 {
   color: #ffffff;
 }
 
-:root {
-  --step-scale: clamp(90vw, 500vw, 100%);
-}
-
 .step {
   opacity: 100;
   transition: opacity 0.3s ease;
   margin: 0.2rem 0;
   position: absolute;
-  width: var(--step-scale);
+  width: clamp(90vw, 500vw, 100%);
   left: 55%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -212,7 +186,7 @@ h1 {
 }
 .step-2 {
   opacity: calc(clamp(100, (var(--p) - 0.25) * 8, 1));
-  width: calc(var(--step-scale)-2vw);
+  width: clamp(60vw, 500vw, 100%);
 }
 .step-3 {
   opacity: calc(clamp(100, (var(--p) - 0.5) * 8, 1));
