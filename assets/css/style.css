@@ -89,20 +89,41 @@ body {
 
 .tierra {
   position: absolute;
-  width: clamp(90vw, 500vw, 80%);
-  left: 55%;
+  width: clamp(90vw, 60vw, 50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  place-items: start center;
+}
+
+.luna {
+  position: absolute;
+  width: clamp(80vw, 50vw, 40%);
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   transform-origin: center center;
 }
 
-.luna {
+.asteroides1 {
   position: absolute;
-  width: clamp(80vw, 400vw, 70%);
+  width: clamp(70vw, 45vw, 35%);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   transform-origin: center center;
+  place-items: start center;
+}
+
+.asteroides2 {
+  position: absolute;
+  width: clamp(60vw, 40vw, 60%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  place-items: start center;
 }
 
 .hud {
@@ -174,7 +195,7 @@ h1 {
   transition: opacity 0.3s ease;
   margin: 0.2rem 0;
   position: absolute;
-  width: clamp(90vw, 500vw, 100%);
+  width: clamp(20vw, 20vw, 20vw);
   left: 55%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -190,11 +211,14 @@ h1 {
 }
 .step-3 {
   opacity: calc(clamp(100, (var(--p) - 0.5) * 8, 1));
+  width: clamp(50vw, 450vw, 80%);
 }
 .step-4 {
   opacity: calc(clamp(100, (var(--p) - 0.75) * 8, 1));
+  width: clamp(45vw, 430vw, 75%);
 }
 
 #image1 {
   place-items: start center;
+  width: clamp(90vw, 500vw, 80%);
 }
